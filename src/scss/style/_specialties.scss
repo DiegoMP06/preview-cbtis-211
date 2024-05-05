@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.specialties {
+    &__heading {
+        text-align: center;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        
+        @include m.tablet{
+            grid-template-columns: repeat(2, 1fr);
+            padding: 5rem 0;
+        }
+    }
+
+    &__item {
+        display: grid;
+        gap: 2rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: white;
+        border-left: .6rem solid v.$pink;
+        box-shadow: v.$shadow;
+
+        &--top {
+            @extend .specialties__item;
+
+            @include m.tablet{
+                transform: translateY(-5rem)
+            }
+        }
+
+        &--bottom {
+            @extend .specialties__item;
+
+            @include m.tablet{
+                transform: translateY(5rem)
+            }
+        }
+    }
+
+    &__name {
+        font-size: 2.4rem;
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+    }
+}

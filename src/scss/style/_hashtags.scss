@@ -1,0 +1,71 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.hashtags {
+    &__heading {
+        text-align: center;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+
+        @include m.tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__section {
+        background-color: v.$white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: v.$shadow;
+        border-left: .6rem solid v.$pink;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__dual_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+    }
+
+    &__hashtag {
+        color: v.$pink;
+        font-weight: bold;
+
+        &--big {
+            @extend .hashtags__hashtag;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &__phrase {
+        @extend .hashtags__hashtag;
+        font-size: 1.8rem;
+    }
+
+    &__areas {
+        padding-left: 2rem;
+        margin: 2rem 0 0 0;
+    }
+
+    &__area {
+        list-style: square;
+        font-size: 2rem;
+
+        &::marker {
+            color: v.$rose;
+        }
+    }
+}

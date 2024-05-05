@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.hero {
+    background: url(/dist/img/hero_1.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 45rem;
+    max-height: 50rem;
+
+    &__overlay {
+        background-color: v.$black_60;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__container {
+        padding: 4rem 0;
+    }
+
+    &__heading {
+        color: v.$white;
+        font-size: 3rem;
+
+        @include m.tablet{
+            font-size: 4rem;
+        }
+
+        @include m.desktop{
+            font-size: 5rem;
+        }
+    }
+
+    &__subheading {
+        color: v.$slate;
+        font-size: 2rem;
+        margin-top: 6rem;
+        font-weight: 700;
+        background-color: v.$cyan;
+        border-radius: 4rem;
+        border: .25rem darken(v.$cyan, 10) solid;
+        padding: 2rem;
+        display: inline-block;
+
+        @include m.tablet{
+            font-size: 3rem;
+        }
+
+        @include m.desktop{
+            font-size: 3.5rem;
+        }
+    }
+}

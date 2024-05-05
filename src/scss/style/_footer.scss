@@ -1,0 +1,78 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer {
+    background-color: v.$cyan;
+    padding: 4rem 0 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 0;
+        gap: 5rem;
+
+        @include m.telefono{
+            flex-direction: row;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: v.$slate;
+        gap: 2rem;
+
+        @include m.tablet{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    &__logo {
+        max-width: 25rem;
+
+        @include m.tablet{
+            width: auto;
+            max-height: 10rem;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__link {
+        background-color: v.$cyan;
+        padding: 1rem;
+        display: block;
+        border-radius: 1rem;
+        transition: background-color ease 150ms;
+
+        &--svg {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        &:hover {
+            background-color: darken(v.$cyan, 10);
+        }
+    }
+
+    &__copy {
+        background-color: v.$rose;
+        display: block;
+        color: v.$white;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+}

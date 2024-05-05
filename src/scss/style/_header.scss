@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+
+.header {
+    background-color: v.$rose;
+    padding: 1rem 0;
+    transition: all ease 150ms;
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+        background-color: v.$white;
+        border-radius: 50%;
+        padding: .2rem;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navigation {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    &__link {
+        display: block;
+        font-weight: 700;
+        font-size: 1.4rem;
+        padding: .5rem;
+        border-radius: .5rem;
+        background-color: v.$rose;
+        transition: background-color ease 150ms;
+
+        &--svg {
+            display: block;
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+
+        &:hover {
+            background-color: darken($color: v.$rose, $amount: 10);
+        }
+    }
+}

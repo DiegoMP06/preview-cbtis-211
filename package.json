@@ -1,0 +1,34 @@
+{
+    "name": "preview_cbtis_211",
+    "version": "1.0.0",
+    "description": "Preview de la pagina con SASS y NPM",
+    "type": "module",
+    "scripts": {
+        "sass": "sass --watch src/scss:build/css",
+        "dev": "gulp",
+        "build": "gulp build",
+        "clean": "gulp clean"
+    },
+    "keywords": [
+        "SASS",
+        "NPM",
+        "Gulp"
+    ],
+    "author": "Diego Meneses perezdi060606@gmail.com",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.4.19",
+        "cssnano": "^7.0.1",
+        "gulp": "^5.0.0",
+        "gulp-clean": "^0.4.0",
+        "gulp-imagemin": "^9.0.0",
+        "gulp-minify-html": "^1.0.6",
+        "gulp-postcss": "^10.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-terser": "^2.1.0",
+        "gulp-terser-js": "^5.2.2",
+        "gulp-webp": "^5.0.0",
+        "sass": "^1.75.0",
+        "webpack-stream": "^7.0.0"
+    }
+}
